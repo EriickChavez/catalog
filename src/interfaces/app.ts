@@ -1,7 +1,13 @@
+export interface IAppNavbarPages {
+  id: string;
+  text: string;
+  route: string;
+}
+
 export interface IAppNavbar {
   logo: string;
   title: string;
-  pages: string[];
+  pages: IAppNavbarPages[];
   searchBar: boolean;
 }
 

@@ -3,5 +3,6 @@ export interface ICategory {
     title: string;
     description: string;
     cover: string;
+    price: number;
     status: string;
 }

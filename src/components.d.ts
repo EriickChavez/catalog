@@ -12,9 +12,11 @@ declare module 'vue' {
     BannerOffer: typeof import('./components/BannerOffer.vue')['default']
     BannerPresentation: typeof import('./components/BannerPresentation.vue')['default']
     BannerServices: typeof import('./components/BannerServices.vue')['default']
+    CategoryList: typeof import('./components/CategoryList.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     NavBar: typeof import('./components/NavBar.vue')['default']
     PresentationBanner: typeof import('./components/PresentationBanner.vue')['default']
+    ProductCards: typeof import('./components/ProductCards.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -5,12 +5,12 @@
       <v-app-bar-title class="ml-2">Photos</v-app-bar-title>
     </template>
 
-    <div v-for="page in pages" :key="page">
-      <a href="/products">
+    <div v-for="page in pages" :key="page.id">
+      <router-link :to="{ name: page.route }">
         <div class="ml-5 mr-5 pl-5 pr-5">
-          {{ page }}
+          {{ page.text }}
         </div>
-      </a>
+      </router-link>
     </div>
   </v-app-bar>
 </template>

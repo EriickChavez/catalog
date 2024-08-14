@@ -5,7 +5,7 @@
       libero vehicula fringilla. Curabitur at malesuada lacus</p>
     <div class="pl-5 pr-5 pt-10 pb-10 mt-5 mb-5 mr-5 ml-5">
       <v-row class="cent">
-        <v-col v-for="item in services" :key="item.id" class="col-md-6 col-sm-12" cols="12" sm="12" md="3" >
+        <v-col v-for="item in services" :key="item.id" md="3" sm="12" cols="12" class="col-md-6 col-sm-12">
           <v-card :style="{ backgroundColor: item.background, color: item.color }" :text="item.description" :title="item.title" />
         </v-col>
       </v-row>
