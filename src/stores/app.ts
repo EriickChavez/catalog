@@ -6,6 +6,8 @@ import { defineStore } from 'pinia'
 const initialState: IAppStore = {
   category: [],
   product: [],
+  categoryFiltered: [], // Añade las propiedades faltantes
+  productFiltered: [],
   configuration: {
     navbar: {
       logo: '',
@@ -17,8 +19,9 @@ const initialState: IAppStore = {
     services: [],
   },
 }
-console.log({ initialStoreState })
+
 export const useAppStore = defineStore('app', {
-  state: () => initialStoreState,
-  getters: () => ({}),
+  state: (): IAppStore => initialStoreState,
+  getters: { },
+  actions: { },
 })

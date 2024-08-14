@@ -1,63 +1,9 @@
 /* eslint-disable semi */
 /* eslint-disable quotes */
-export interface ICategory {
-  id: string;
-  title: string;
-  description: string;
-  cover: string;
-  status: string;
-}
 
-export interface IAppNavbarPages {
-  id: string;
-  text: string;
-  route: string;
-}
-
-export interface IAppNavbar {
-  logo: string;
-  title: string;
-  pages: IAppNavbarPages[];
-  searchBar: boolean;
-}
-
-export interface IAppBanner {
-  id: string;
-  screen: string[];
-  title: string;
-  description: string;
-  img: string;
-  background: string;
-  color: string;
-}
-export interface IAppServices {
-  id: string;
-  title: string;
-  img: string;
-  description: string;
-  color: string;
-  background: string;
-}
-export interface IAppConfiguration {
-  navbar: IAppNavbar;
-  banner: IAppBanner[];
-  services: IAppServices[];
-}
-
-export interface IProduct {
-  id: string;
-  title: string;
-  description: string;
-  cover: string;
-  status: string;
-  media: string[];
-}
-
-export interface IAppStore {
-  category: ICategory[];
-  product: IProduct[];
-  configuration: IAppConfiguration;
-}
+import { IAppBanner, IAppConfiguration, IAppNavbar, IAppServices } from "@/interfaces/app";
+import { ICategory } from "@/interfaces/category";
+import { IAppStore } from "@/interfaces/store";
 
 const navbar: IAppNavbar = {
   logo: "https://via.placeholder.com/150x150.png?text=Books",
@@ -126,6 +72,7 @@ const category: ICategory[] = [
     description: "Toys for children of all ages.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "inactive",
+    price: 10.59,
   },
   {
     id: "cat-0.31952639266032934",
@@ -133,6 +80,7 @@ const category: ICategory[] = [
     description: "Clothing for all seasons.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "inactive",
+    price: 10.59,
   },
   {
     id: "cat-0.47648451633965205",
@@ -140,6 +88,7 @@ const category: ICategory[] = [
     description: "Category for all kinds of electronics.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "inactive",
+    price: 10.59,
   },
   {
     id: "cat-0.330448915415519",
@@ -147,6 +96,7 @@ const category: ICategory[] = [
     description: "Clothing for all seasons.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "archived",
+    price: 10.59,
   },
   {
     id: "cat-0.3025498947514862",
@@ -154,6 +104,7 @@ const category: ICategory[] = [
     description: "A wide selection of books.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "active",
+    price: 10.59,
   },
   {
     id: "cat-0.633799645757585",
@@ -161,6 +112,7 @@ const category: ICategory[] = [
     description: "Furniture for every room in your house.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "archived",
+    price: 10.59,
   },
   {
     id: "cat-0.8972047198500692",
@@ -168,6 +120,7 @@ const category: ICategory[] = [
     description: "Toys for children of all ages.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "active",
+    price: 10.59,
   },
   {
     id: "cat-0.8306464679430197",
@@ -175,6 +128,7 @@ const category: ICategory[] = [
     description: "Category for all kinds of electronics.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "archived",
+    price: 10.59,
   },
   {
     id: "cat-0.6932034603003001",
@@ -182,6 +136,7 @@ const category: ICategory[] = [
     description: "A wide selection of books.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "archived",
+    price: 10.59,
   },
   {
     id: "cat-0.38144211122513716",
@@ -189,6 +144,7 @@ const category: ICategory[] = [
     description: "A wide selection of books.",
     cover: "https://via.placeholder.com/150/24f355",
     status: "inactive",
+    price: 10.59,
   },
 ];
 
@@ -200,6 +156,8 @@ const configuration: IAppConfiguration = {
 
 const initialStoreState: IAppStore = {
   category,
+  productFiltered: [],
+  categoryFiltered: [],
   product: [],
   configuration,
 };
