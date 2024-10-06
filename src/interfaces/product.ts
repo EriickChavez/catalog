@@ -5,4 +5,7 @@ export interface IProduct {
   cover: string;
   status: string;
   media: string[];
+  price: number;
+  discount: number;
+  categories: Array<string>;
 }

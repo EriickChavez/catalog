@@ -10,6 +10,8 @@ declare module 'vue' {
     BannerForm: typeof import('./components/BannerForm.vue')['default']
     BannerPresentation: typeof import('./components/BannerPresentation.vue')['default']
     BannerServices: typeof import('./components/BannerServices.vue')['default']
+    CardDeatils: typeof import('./components/CardDeatils.vue')['default']
+    CardDeatilsProduct: typeof import('./components/CardDeatilsProduct.vue')['default']
     CategoryList: typeof import('./components/CategoryList.vue')['default']
     NavBar: typeof import('./components/NavBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
